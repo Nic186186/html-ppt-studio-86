@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "name": "日式法务编辑风 / Japanese Legal Editorial",
+    "description": "从内藤与大塚律师事务所网页及 8 张参考截图提炼的编辑型视觉系统：纸张噪点、黑白纪实摄影、炭灰章节、朱红点睛、超大衬线英文和严格建筑网格。",
+    "source_references": ["日式风格/1.png–8.png", "内藤与大塚律师事务所.html", "add_style.css", "style.css", "script.js"],
+    "created_at": "2026-07-24T13:30:00+08:00"
+  },
+  "design_system": {
+    "color": {
+      "palette_type": "restrained editorial duotone with a single vermilion signal accent",
+      "primary": {"hex": "#212836", "role": "ink-blue typography, rules and structural navigation"},
+      "secondary": {"hex": "#40403D", "role": "full-bleed charcoal chapter surfaces"},
+      "accent": {"hex": "#D3030F", "role": "small bullets, signal blocks and pagination highlights only"},
+      "neutral": {"scale": ["#F2F2E9", "#EEEEE2", "#B7B7B1", "#7D7E82", "#40403D", "#212836"], "usage": "warm paper canvas, muted labels, hairline separators and charcoal inverse sections"},
+      "semantic": {"success": "#3F6B54", "warning": "#B87819", "error": "#D3030F", "info": "#315A78"},
+      "surface": {"background": "#F2F2E9", "card": "#EEEE E2", "elevated": "#FFFFFF"},
+      "contrast_strategy": "alternate warm-paper and charcoal chapters; preserve near-black text and reserve vermilion for less than 8% of each frame"
+    },
+    "typography": {
+      "type_scale": {
+        "display": {"size": "clamp(72px, 10vw, 190px)", "weight": "400", "line_height": "0.86", "tracking": "-0.045em"},
+        "heading_1": {"size": "clamp(48px, 6vw, 118px)", "weight": "500", "line_height": "0.95", "tracking": "-0.025em"},
+        "heading_2": {"size": "clamp(34px, 4vw, 74px)", "weight": "500", "line_height": "1.05", "tracking": "0.00em"},
+        "heading_3": {"size": "clamp(24px, 2.4vw, 42px)", "weight": "500", "line_height": "1.15", "tracking": "0.02em"},
+        "body": {"size": "clamp(16px, 1.15vw, 22px)", "weight": "400", "line_height": "1.9", "tracking": "0.04em"},
+        "body_small": {"size": "clamp(13px, 0.9vw, 17px)", "weight": "400", "line_height": "1.6", "tracking": "0.03em"},
+        "caption": {"size": "12px", "weight": "500", "line_height": "1.4", "tracking": "0.06em"},
+        "overline": {"size": "11px", "weight": "600", "line_height": "1", "tracking": "0.14em"}
+      },
+      "font_families": {"heading": "Cormorant Garamond, Noto Serif SC, serif", "body": "Zen Kaku Gothic New, Hiragino Kaku Gothic ProN, sans-serif", "mono": "Heebo, ui-monospace, monospace"},
+      "font_style_notes": "Use high-contrast serif for giant English editorial statements; use geometric Japanese grotesk for Chinese/Japanese information; vertical CJK titles are allowed as structural markers."
+    },
+    "spacing": {"base_unit": "10px", "scale": ["10px", "20px", "30px", "40px", "60px", "80px", "120px", "160px", "200px"], "content_density": "medium-low with occasional dense editorial lists", "section_rhythm": "large 80–160px breathing zones separated by full-width hairlines"},
+    "layout": {"grid_system": "12-column editorial grid with visible hairline guides and asymmetric 3/5/4 compositions", "max_content_width": "1680px", "columns": 12, "gutter": "20–40px", "breakpoints": ["375px", "640px", "768px", "1100px", "1280px", "1480px", "1920px"], "alignment_tendency": "left-aligned, baseline-led, intentionally off-center"},
+    "shape": {"border_radius": {"small": "0px", "medium": "0px", "large": "0–24px only on the outer page frame", "pill": "0px"}, "border_usage": "1px ink-blue or warm-gray rules form the composition", "divider_style": "long horizontal hairlines with arrow terminals"},
+    "elevation": {"shadow_style": "almost flat; photography and color blocks provide depth", "levels": {"low": "none", "medium": "0 0 20px rgb(0 0 0 / 0.12)", "high": "0 0 40px rgb(0 0 0 / 0.25)"}, "depth_cues": "image overlap, crops, large scale contrast and alternating surface colors"},
+    "iconography": {"style": "minimal line arrows and tiny solid signal dots", "stroke_weight": "1–1.5px", "size_scale": ["8px", "16px", "32px"], "preferred_set": "custom inline SVG arrows rather than illustrative icon packs"},
+    "motion": {"easing": "ease; linear for image fades and scroll masks", "duration_scale": {"micro": "0.2s", "normal": "0.6s", "macro": "3s"}, "entrance_pattern": "masked vertical reveal, opacity fade and image wipe", "exit_pattern": "quiet fade or continuation beyond viewport", "philosophy": "slow, deliberate, cinematic motion that never competes with legal content"},
+    "components": {"button_style": "flat text CTA between hairlines with a rectangular arrow cell", "input_style": "minimal underline field with no rounded container", "card_style": "borderless editorial block or squared image crop", "navigation_pattern": "thin fixed header with widely spaced labels", "modal_style": "flat paper overlay with strong typographic hierarchy", "list_style": "single-line rows divided by hairlines and right-facing arrows", "component_notes": "Prefer spatial hierarchy over boxes; red dots label chapters and small metadata."
+    }
+  },
+  "design_style": {
+    "aesthetic": {"mood": "quietly authoritative, forensic and cultured", "visual_metaphor": "a contemporary legal journal printed on archival paper", "era_influence": "modern Japanese editorial design with 1960s Swiss grid discipline", "genre": "premium institutional editorial", "personality_traits": ["precise", "restrained", "intellectual", "cinematic", "credible"], "adjectives": ["日式", "法务", "纸感", "纪实", "严谨", "高级"]},
+    "visual_language": {"complexity": "moderate composition, minimal decoration", "ornamentation": "paper grain, oversized typography and archival marks only", "whitespace_usage": "expansive and functional", "visual_weight_distribution": "one dominant text or image anchor balanced by small metadata", "focal_strategy": "extreme scale contrast plus a single vermilion signal", "contrast_level": "high tonal contrast, low chromatic variety", "texture_usage": "persistent fine paper grain and photocopy-like image noise"},
+    "composition": {"hierarchy_method": "scale, crop and grid position rather than cards", "balance_type": "asymmetric but optically stable", "flow_direction": "left-to-right with occasional vertical Japanese markers", "grouping_strategy": "hairlines, shared baselines and large negative-space zones", "negative_space_role": "establishes authority and slows reading rhythm"},
+    "imagery": {"photo_treatment": "high-grain monochrome documentary photography, deep blacks, slightly warm highlights", "illustration_style": "rare; use utilitarian diagrams, barcodes or archival marks", "graphic_elements": "vermilion rectangles, red dots, thin rules, arrows, oversized serif words", "pattern_usage": "fine noise and subtle scan-line texture across paper surfaces", "image_shape": "strict rectangles, hard crops, edge-to-edge panels and editorial collage"},
+    "interaction_feel": {"feedback_style": "subtle arrow travel and opacity change", "hover_behavior": "image scale up 1–2% or row-arrow slide", "transition_personality": "measured and quiet", "loading_style": "minimal red indicator or paper-mask reveal", "microinteraction_density": "low"},
+    "brand_voice_in_ui": {"tone": "calm, exact and principled", "formality": "high", "cta_style": "short noun/verb labels such as 更多 / VIEW", "empty_state_approach": "editorial whitespace with one explanatory line", "error_tone": "direct, factual and non-alarmist"}
+  },
+  "visual_effects": {
+    "overview": {"effect_intensity": "low-to-medium", "performance_tier": "standard desktop/mobile", "fallback_strategy": "retain static paper texture, final frame and readable content when motion is disabled", "primary_technology": "CSS, SVG, Splide and GSAP ScrollTrigger"},
+    "background_effects": {"type": "tiled paper grain", "description": "subtle monochrome noise repeated over warm paper and image surfaces", "technology": "CSS background-image", "params": {"color_palette": ["#F2F2E9", "#B7B7B1", "#40403D"], "speed": "static", "density": "fine/high", "opacity": "0.10–0.22", "blend_mode": "multiply"}},
+    "particle_systems": {"enabled": false, "type": "none", "description": "Reference site uses paper grain rather than particles.", "technology": "none", "params": {"count": 0, "shape": "none", "size_range": "0", "movement_pattern": "none", "color_behavior": "none", "interaction": "none", "spawn_area": "none"}},
+    "3d_elements": {"enabled": false, "type": "none", "description": "No 3D rendering detected.", "technology": "none", "params": {"renderer": "none", "lighting": "none", "camera": "none", "materials": "none", "geometry": "none", "post_processing": "none", "interaction_model": "none"}},
+    "shader_effects": {"enabled": false, "type": "none", "description": "No custom shader detected.", "technology": "none", "params": {"uniforms": {}, "vertex_manipulation": "none", "fragment_output": "none", "noise_type": "raster paper grain", "distortion": "none"}},
+    "scroll_effects": {"parallax": {"enabled": true, "layers": ["foreground copy", "image panels", "mask/reveal layer"], "depth_range": "subtle 0–24px equivalent", "speed_curve": "linear scrub"}, "scroll_triggered_animations": {"enabled": true, "trigger_points": ["section top enters viewport", "sticky service chapter boundaries"], "animation_type": "height wipe, opacity reveal and pinned chapter transition", "scrub_behavior": "GSAP ScrollTrigger scrub enabled"}, "scroll_morphing": {"enabled": true, "description": "Full-height overlay masks collapse during service-section scrolling."}},
+    "text_effects": {"type": "oversized crop and masked reveal", "description": "Display text exceeds the viewport and is intentionally clipped like a magazine spread.", "technology": "CSS overflow plus GSAP/CSS transitions", "params": {"split_strategy": "line or full phrase", "animation_per_unit": "opacity/translate reveal", "stagger": "0.04–0.08s when used", "effect_style": "quiet editorial reveal"}},
+    "cursor_effects": {"enabled": false, "type": "native pointer", "description": "No custom cursor detected.", "params": {"shape": "system", "size": "system", "blend_mode": "normal", "trail": "none", "interaction_zone": "links and CTAs"}},
+    "image_effects": {"type": "monochrome grain, fade carousel and crop reveal", "description": "Photographs are desaturated, contrast-rich and revealed slowly in squared editorial frames.", "technology": "CSS filters, Splide fade and GSAP ScrollTrigger", "params": {"filter_pipeline": "grayscale(1) contrast(1.08) plus multiply grain", "hover_transform": "scale(1.015)", "reveal_animation": "3s crossfade or vertical mask wipe", "distortion_type": "none"}},
+    "glassmorphism_neumorphism": {"enabled": false}
+  }
+}

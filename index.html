@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML PPT Studio · 生成工作台</title>
+  <link rel="stylesheet" href="./styles.css?v=20260814-2">
+</head>
+<body>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="aurora aurora-a" aria-hidden="true"></div>
+  <div class="aurora aurora-b" aria-hidden="true"></div>
+  <div class="noise"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">P</span><div><strong>HTML PPT Studio</strong><small>本地生成工作台</small></div></div>
+    <div class="top-actions"><span class="status-dot"></span><span id="scan-status">正在读取本地 Skill…</span><button class="icon-btn" id="refresh-btn">↻</button></div>
+  </header>
+
+  <main class="v2-main">
+    <section class="v2-hero">
+      <div><p class="eyebrow">ONE WORKSPACE · FIVE PPT SKILLS · ZERO CONTEXT SWITCHING</p><h1>从内容到发布，<br><em>都在这里完成。</em></h1></div>
+      <p>先选主 Skill，再选版式和配色。可以直接生成，也可以使用提示词模板；参考图只提取风格，不会出现在幻灯片中。</p>
+    </section>
+
+    <section class="cockpit">
+      <aside class="mode-rail">
+        <div class="rail-label">生成配置</div>
+        <button class="rail-tab active" data-panel="skill-panel"><span>01</span><b>Skill</b><small>主打能力</small></button>
+        <button class="rail-tab" data-panel="prompt-panel"><span>02</span><b>提示词</b><small id="prompt-tab-status">直接生成</small></button>
+        <button class="rail-tab" data-panel="reference-panel"><span>03</span><b>参考图</b><small id="reference-count">0 张，仅参考</small></button>
+        <div class="rail-summary"><span>当前方案</span><strong id="rail-skill">尚未选择</strong><small id="rail-style">—</small></div>
+      </aside>
+
+      <div class="builder">
+        <section class="content-card">
+          <div class="card-heading"><div><span class="step">00</span><h2>本次内容</h2></div><div class="sample-actions"><button class="text-btn" id="profile-sample-btn">载入 86 老师案例</button><button class="text-btn featured" id="sample-btn">载入 Vibe Coding 示例</button></div></div>
+          <div class="content-topline"><input id="deck-title" class="title-input" placeholder="主题，例如：Vibe Coding 从想法到产品"><label>页数 <input id="page-count" type="number" value="20" min="3" max="60"></label></div>
+          <textarea id="content-input" placeholder="粘贴正文、大纲、文章或会议材料……"></textarea>
+          <div class="content-meta"><span id="char-count">0 字</span><div id="content-tags"><span>等待内容</span></div></div>
+        </section>
+
+        <section class="config-panel active" id="skill-panel">
+          <div class="card-heading"><div><span class="step">01</span><h2>选择主 Skill</h2></div><p>只选能力来源，不再面对 70 多个平级选项</p></div>
+          <div class="family-grid" id="family-grid"></div>
+          <div class="extension-row" id="extension-row"></div>
+          <details class="coverage-drawer"><summary>截图中的 6 个项目 · 安装覆盖状态 <b>全部可用</b></summary><div id="coverage-list"></div></details>
+          <div class="skill-detail hidden" id="skill-detail">
+            <div class="skill-showcase"><img id="detail-image" alt="Skill 实际效果截图"><span>实际效果截图</span></div>
+            <div class="detail-main">
+              <div class="detail-copy"><span id="detail-author">作者</span><h3 id="detail-name">Skill</h3><p id="detail-reason"></p><a id="detail-repo" target="_blank" rel="noreferrer">查看原仓库 ↗</a></div>
+              <div class="detail-controls">
+                <label>版式 / 主题<select id="style-select"></select></label>
+                <label>配色方案<select id="color-select"></select></label>
+                <div class="selected-palette"><small>当前颜色组合</small><div id="selected-palette-swatches"></div></div>
+                <button class="secondary-btn" id="style-preview-btn">预览所选样式</button>
+              </div>
+            </div>
+            <details class="theme-drawer" open><summary><span>全部主题与配色</span><b id="theme-count">0 套</b></summary><div class="theme-gallery" id="theme-gallery"></div></details>
+            <section class="instant-case">
+              <div class="instant-case-head"><div><span>REAL CONTENT · ZERO WAITING</span><h3 id="instant-case-title">Vibe Coding · 20 页完整课程案例</h3><p id="instant-case-copy">已按完整文稿重构为 20 页；切换任一 Skill、主题或配色即可即时查看。</p></div><button class="secondary-btn" id="open-case-btn">全屏查看案例 ↗</button></div>
+              <div class="instant-case-stage"><iframe id="instant-case-frame" title="真实内容案例" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="config-panel" id="prompt-panel">
+          <div class="card-heading"><div><span class="step">02</span><h2>内容生成方式</h2></div><p>直接生成，或套用一个可编辑的提示词模板</p></div>
+          <div class="generation-mode">
+            <button class="mode-choice active" data-mode="direct"><span>DIRECT</span><b>直接生成</b><small>保留原内容，由所选 Skill 负责结构化</small></button>
+            <button class="mode-choice" data-mode="template"><span>PROMPT</span><b>提示词模板</b><small>用流程图、发布会等叙事模板约束生成</small></button>
+          </div>
+          <div id="template-area" class="template-area hidden">
+            <div class="prompt-template-list" id="prompt-template-list"></div>
+            <label class="prompt-editor-label">当前提示词，可直接修改<textarea id="prompt-editor"></textarea></label>
+          </div>
+          <div id="direct-note" class="direct-note"><strong>直接模式</strong><p>系统会把正文、页数、Skill、版式和配色一起交给 Codex，不额外改变你的叙事意图。</p></div>
+        </section>
+
+        <section class="config-panel" id="reference-panel">
+          <div class="card-heading"><div><span class="step">03</span><h2>添加参考图</h2></div><p>只参考视觉语言，绝不把原图展示到 PPT 页面</p></div>
+          <div class="reference-style-block"><div class="mini-heading"><span>已提炼的参考风格</span><small>可直接叠加到任一 Skill</small></div><div id="reference-style-list"></div></div>
+          <label class="dropzone" id="dropzone"><input id="reference-input" type="file" accept="image/*" multiple><span class="drop-icon">＋</span><b>拖入或选择新的参考图</b><small>最多 5 张，每张不超过 8MB；生成时作为视觉输入传给 Codex</small></label>
+          <div class="reference-grid" id="reference-grid"></div>
+          <div class="privacy-note"><span>PRIVATE</span> 图片只保存在本次生成目录中，不会显示在幻灯片里。</div>
+        </section>
+
+        <section class="launch-card">
+          <div><span class="ready-dot"></span><div><small>网页内直接生成</small><strong id="launch-summary">请选择一个主 Skill</strong></div></div>
+          <button class="launch-btn" id="generate-btn" disabled>开始生成 HTML PPT <span>→</span></button>
+        </section>
+
+        <section class="job-card hidden" id="job-card">
+          <div class="job-head"><div><span class="job-pulse"></span><div><small id="job-status-label">CODEX IS WORKING</small><h2 id="job-title">正在生成</h2></div></div><span id="job-time">刚刚</span></div>
+          <div class="job-progress"><i id="job-progress-bar"></i></div>
+          <div class="job-metrics">
+            <div><small>估算进度</small><strong id="job-progress-text">5%</strong><span id="job-stage">正在排队</span></div>
+            <div><small>已用时间</small><strong id="job-elapsed">00:00</strong><span>实时计时</span></div>
+            <div><small>预计剩余</small><strong id="job-remaining">约 06:00</strong><span>根据当前阶段估算</span></div>
+          </div>
+          <aside class="waiting-quote" id="waiting-quote">
+            <div class="quote-label"><span>OBSIDIAN WIKI</span><small id="quote-counter">等待时读一句 · 1 / 100</small></div>
+            <blockquote id="waiting-quote-text">真正的自动化，是把重复交给机器，把判断留给人。</blockquote>
+            <cite id="waiting-quote-source">来自「纳瓦尔宝典」</cite>
+          </aside>
+          <pre id="job-log">任务已创建…</pre>
+          <div class="result-wrap hidden" id="result-wrap">
+            <div class="result-toolbar"><strong>生成结果</strong><a id="result-link" target="_blank">在新窗口打开 ↗</a></div>
+            <iframe id="result-frame" sandbox="allow-scripts allow-forms allow-popups allow-same-origin"></iframe>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="preview-dialog" class="modal preview-modal">
+    <div class="modal-head"><div><small>LIVE PREVIEW</small><h3 id="preview-title">样式预览</h3></div><button class="close-btn" data-close="preview-dialog">×</button></div>
+    <div id="preview-stage" class="preview-stage"></div>
+  </dialog>
+  <script src="./app.js?v=20260814-2"></script>
+</body>
+</html>

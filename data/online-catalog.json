@@ -1,0 +1,87 @@
+{
+  "stats":{"families":5,"extensions":1,"styles":11,"livePreviews":11},
+  "codex":{"available":false,"binary":null},
+  "families":[
+    {
+      "id":"frontend-slides","name":"Frontend Slides","zhName":"前端幻灯片","author":"Zara Zhang","repo":"zarazhangrui/frontend-slides","primary":true,
+      "tagline":"强视觉课程实验室，适合课程、品牌分享和创意演讲","recommendation":"高冲击力、强节奏和固定16:9舞台，适合需要现场感染力的内容。","accent":"#f36f56","previewImage":"/assets/previews/frontend-slides.png","count":2,
+      "palettes":[
+        {"id":"theme","name":"跟随所选主题（推荐）","colors":["#1A1A1A","#2D2D2D","#FF5722","#FFFFFF"],"description":"使用主题原始色系"},
+        {"id":"electric","name":"电光蓝","colors":["#F5F3EA","#165DFF","#A8B9FF","#111318"],"description":"单一蓝色系"},
+        {"id":"mint","name":"薄荷清新","colors":["#F2FAF7","#2D7C70","#74E0BD","#14201D"],"description":"单一绿色系"}
+      ],
+      "styles":[
+        {"id":"frontend-preset:bold-signal","name":"Bold Signal","zhName":"强烈信号","palette":["#1A1A1A","#2D2D2D","#FF5722","#FFFFFF"]},
+        {"id":"frontend-preset:electric-studio","name":"Electric Studio","zhName":"电光工作室","palette":["#F5F3EA","#165DFF","#A8B9FF","#111318"]}
+      ]
+    },
+    {
+      "id":"beautiful-html-templates","name":"Beautiful HTML Templates","zhName":"美丽 HTML 模板库","author":"Zara Zhang","repo":"zarazhangrui/beautiful-html-templates","primary":true,
+      "tagline":"纸张杂志编辑，强调衬线字体与不对称版面","recommendation":"适合个人品牌、观点分享、出版物和高审美内容。","accent":"#e85d26","previewImage":"/assets/previews/beautiful-html-templates.png","count":2,
+      "palettes":[
+        {"id":"theme","name":"编辑原色（推荐）","colors":["#F5F3EE","#1A1A1A","#E85D26","#F2D8C8"],"description":"暖纸与火橙"},
+        {"id":"government","name":"政企可信 · 深海蓝","colors":["#F3F1EA","#16355C","#7C91AA","#171B21"],"description":"单一深蓝色系"},
+        {"id":"women","name":"女性学习圈 · 暖珊瑚","colors":["#FFF5EF","#D95D62","#F3A5A8","#2F2830"],"description":"单一暖珊瑚色系"}
+      ],
+      "styles":[
+        {"id":"frontend-bold:soft-editorial","name":"Soft Editorial","zhName":"柔和编辑","palette":["#F5F3EE","#1A1A1A","#E85D26","#F2D8C8"]},
+        {"id":"frontend-bold:emerald-editorial","name":"Emerald Editorial","zhName":"祖母绿杂志","palette":["#F1F0E8","#173B2C","#6D9A82","#15231D"]}
+      ]
+    },
+    {
+      "id":"html-anything","name":"HTML Anything · Decks","zhName":"全场景幻灯片合集","author":"nexu-io","repo":"nexu-io/html-anything","primary":true,
+      "tagline":"暗色模块化产品界面，适合技术、产品和数据内容","recommendation":"模块清楚、界面感强，适合产品发布、技术分享和流程展示。","accent":"#00C8FF","previewImage":"/assets/previews/html-anything.png","count":2,
+      "palettes":[
+        {"id":"theme","name":"深夜青蓝（推荐）","colors":["#0B0F18","#00C8FF","#7EE5FF","#F4F7FF"],"description":"单一青蓝色系"},
+        {"id":"mint","name":"终端薄荷","colors":["#0D1513","#4CC9A6","#9AE6D0","#F2FAF7"],"description":"单一薄荷色系"},
+        {"id":"mono","name":"黑白高对比","colors":["#111111","#777777","#D8D8D8","#FFFFFF"],"description":"单一灰阶"}
+      ],
+      "styles":[
+        {"id":"skill:deck-blueprint","name":"Blueprint","zhName":"蓝图工程","palette":["#0B0F18","#00C8FF","#7EE5FF","#F4F7FF"]},
+        {"id":"skill:deck-graphify-dark","name":"Graphify Dark","zhName":"深色图表","palette":["#0D1513","#4CC9A6","#9AE6D0","#F2FAF7"]}
+      ]
+    },
+    {
+      "id":"guizang","name":"归藏 PPT","zhName":"归藏电子杂志","author":"op7418","repo":"op7418/guizang-ppt-skill","primary":true,
+      "tagline":"中文电子杂志、书脊结构与电子墨水风格","recommendation":"适合观点型分享、行业演讲和高辨识度发布会。","accent":"#D3030F","previewImage":"/assets/previews/guizang-ppt.png","count":2,
+      "palettes":[
+        {"id":"monocle","name":"墨水经典","colors":["#F2F2E9","#212836","#D3030F","#B7B7B1"],"description":"纸张、墨黑与朱红"},
+        {"id":"indigo","name":"靛蓝瓷","colors":["#F3EFE5","#1D315D","#7185AE","#171C29"],"description":"单一靛蓝色系"},
+        {"id":"forest","name":"森林墨","colors":["#EEEADF","#173B2C","#6E8D7C","#14211B"],"description":"单一森林绿色系"}
+      ],
+      "styles":[
+        {"id":"guizang:editorial","name":"Editorial × E-Ink","zhName":"电子杂志 × 电子墨水","palette":["#F2F2E9","#212836","#D3030F","#B7B7B1"]},
+        {"id":"guizang:swiss","name":"Swiss International","zhName":"瑞士国际主义","palette":["#F5F3E9","#174CFF","#7F9BFF","#111318"]}
+      ]
+    },
+    {
+      "id":"html-ppt","name":"HTML PPT Studio","zhName":"HTML 演示系统","author":"lewislulu","repo":"lewislulu/html-ppt-skill","primary":true,
+      "tagline":"瑞士网格、粗线条信息设计和演讲系统","recommendation":"适合正式汇报、图表、演讲者备注和持续迭代。","accent":"#165DFF","previewImage":"/assets/previews/html-ppt-studio.png","count":2,
+      "palettes":[
+        {"id":"theme","name":"瑞士钴蓝（推荐）","colors":["#F7F8FB","#165DFF","#8FAAFF","#161922"],"description":"单一钴蓝色系"},
+        {"id":"muted","name":"冷静灰蓝","colors":["#F1F0EC","#586174","#A7AFBF","#262833"],"description":"低饱和灰蓝"}
+      ],
+      "styles":[
+        {"id":"html-ppt-theme:swiss-grid","name":"Swiss Grid","zhName":"瑞士网格","palette":["#F7F8FB","#165DFF","#8FAAFF","#161922"]},
+        {"id":"html-ppt-theme:academic-paper","name":"Academic Paper","zhName":"学术论文","palette":["#FDFCF8","#586174","#A7AFBF","#17191F"]}
+      ]
+    },
+    {
+      "id":"kami","name":"Kami","zhName":"安静阅读扩展","author":"tw93","repo":"tw93/Kami","primary":false,
+      "tagline":"温暖羊皮纸与衬线层级的安静阅读风格","recommendation":"适合人文内容、白皮书和个人作品集。","accent":"#B88B57","previewImage":null,"count":1,
+      "palettes":[{"id":"parchment","name":"羊皮纸 × 墨蓝","colors":["#F3ECDD","#17395C","#879CB4","#24211F"],"description":"温暖纸张色系"}],
+      "styles":[{"id":"kami:parchment","name":"Warm Parchment","zhName":"温暖羊皮纸","palette":["#F3ECDD","#17395C","#879CB4","#24211F"]}]
+    }
+  ],
+  "referenceStyles":[
+    {"id":"japanese-legal-editorial","name":"日式法务编辑风","source":"用户参考文件夹 · 日式风格","description":"米白纸张、炭灰、朱红点睛、超大衬线字与严谨网格。","previewImage":"/assets/reference-styles/japanese-legal-editorial.png","dnaUrl":"/data/japanese-legal-editorial-dna.json","palette":["#F2F2E9","#40403D","#212836","#D3030F","#B7B7B1"]}
+  ],
+  "coverage":[
+    {"name":"guizang-ppt-skill","author":"op7418","status":"在线可预览","note":"代表性案例"},
+    {"name":"beautiful-html-templates","author":"zarazhangrui","status":"在线可预览","note":"编辑杂志案例"},
+    {"name":"Kami","author":"tw93","status":"在线可预览","note":"安静阅读扩展"},
+    {"name":"html-anything","author":"nexu-io","status":"在线可预览","note":"模块化案例"},
+    {"name":"design-dna","author":"zanwei","status":"本机可用","note":"参考图分析需本机"},
+    {"name":"frontend-slides","author":"zarazhangrui","status":"在线可预览","note":"课程实验室案例"}
+  ]
+}
