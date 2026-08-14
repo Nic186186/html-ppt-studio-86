@@ -98,7 +98,13 @@ function updatePaletteDisplay(){
   $('#selected-palette-swatches').innerHTML=effectivePalette().map(color=>`<span style="--swatch:${color}" title="${color}"><i></i><b>${color}</b></span>`).join('');
 }
 function casePreviewUrl(){
-  const casePath=state.activeCase==='vibe'?'./cases/vibe-coding-20/index.html':'./cases/86-profile/index.html';
+  const signatureCases={
+    'frontend-slides':'./cases/vibe-signatures/frontend-slides.html',
+    'beautiful-html-templates':'./cases/vibe-signatures/beautiful-editorial.html',
+    'html-anything':'./cases/vibe-signatures/html-anything.html',
+    'guizang':'./cases/vibe-signatures/guizang-eink.html',
+  };
+  const casePath=state.activeCase==='vibe'?(signatureCases[state.family?.id]||'./cases/vibe-coding-20/index.html'):'./cases/86-profile/index.html';
   if(!state.family||!state.style)return casePath;
   const query=new URLSearchParams({family:state.family.id,style:state.style.id,colors:effectivePalette().join(',')});
   return `${casePath}?${query.toString()}`;

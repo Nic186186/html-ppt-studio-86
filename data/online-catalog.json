@@ -1,61 +1,61 @@
 {
-  "stats":{"families":5,"extensions":1,"styles":11,"livePreviews":11},
+  "stats":{"families":4,"extensions":2,"styles":4,"livePreviews":4},
   "codex":{"available":false,"binary":null},
   "families":[
     {
       "id":"frontend-slides","name":"Frontend Slides","zhName":"前端幻灯片","author":"Zara Zhang","repo":"zarazhangrui/frontend-slides","primary":true,
-      "tagline":"强视觉课程实验室，适合课程、品牌分享和创意演讲","recommendation":"高冲击力、强节奏和固定16:9舞台，适合需要现场感染力的内容。","accent":"#f36f56","previewImage":"/assets/previews/frontend-slides.png","count":2,
+      "tagline":"强视觉课程实验室，适合课程、品牌分享和创意演讲","recommendation":"经典能力是粗线框、几何形、大标题与强节奏发布会舞台。","accent":"#f36f56","previewImage":"/assets/previews/frontend-slides.png","count":1,
       "palettes":[
-        {"id":"theme","name":"跟随所选主题（推荐）","colors":["#1A1A1A","#2D2D2D","#FF5722","#FFFFFF"],"description":"使用主题原始色系"},
-        {"id":"electric","name":"电光蓝","colors":["#F5F3EA","#165DFF","#A8B9FF","#111318"],"description":"单一蓝色系"},
-        {"id":"mint","name":"薄荷清新","colors":["#F2FAF7","#2D7C70","#74E0BD","#14201D"],"description":"单一绿色系"}
+        {"id":"coral","name":"招牌珊瑚黄（推荐）","colors":["#F6F1E7","#FF5B3D","#F6DF47","#151515"],"description":"课程实验室招牌色"},
+        {"id":"electric","name":"电光钴蓝","colors":["#F2F5F3","#165DFF","#B6C2FF","#111318"],"description":"高能科技发布会"},
+        {"id":"mint","name":"薄荷实验室","colors":["#F0F7F3","#167B68","#AADCC8","#10201C"],"description":"清爽教学场景"},
+        {"id":"dark","name":"暗场橙光","colors":["#111318","#FF6A3D","#3A4151","#F9F7F1"],"description":"深色舞台演讲"}
       ],
       "styles":[
-        {"id":"frontend-preset:bold-signal","name":"Bold Signal","zhName":"强烈信号","layout":"左右发布会封面 · 粗线卡片","palette":["#1A1A1A","#2D2D2D","#FF5722","#FFFFFF"]},
-        {"id":"frontend-preset:electric-studio","name":"Electric Studio","zhName":"电光工作室","layout":"上下舞台封面 · 非对称三栏","palette":["#F5F3EA","#165DFF","#A8B9FF","#111318"]}
+        {"id":"frontend-signature:bold-lab","name":"Bold Product Lab","zhName":"招牌课程实验室","layout":"几何发布会封面 · 粗线卡片 · 行动流程","palette":["#F6F1E7","#FF5B3D","#F6DF47","#151515"]}
       ]
     },
     {
       "id":"beautiful-html-templates","name":"Beautiful HTML Templates","zhName":"美丽 HTML 模板库","author":"Zara Zhang","repo":"zarazhangrui/beautiful-html-templates","primary":true,
-      "tagline":"纸张杂志编辑，强调衬线字体与不对称版面","recommendation":"适合个人品牌、观点分享、出版物和高审美内容。","accent":"#e85d26","previewImage":"/assets/previews/beautiful-html-templates.png","count":2,
+      "tagline":"纸张杂志编辑，强调衬线字体与不对称版面","recommendation":"经典能力是杂志封面、照片跨页、衬线长文与编辑式目录。","accent":"#e85d26","previewImage":"/assets/previews/beautiful-html-templates.png","count":1,
       "palettes":[
-        {"id":"theme","name":"编辑原色（推荐）","colors":["#F5F3EE","#1A1A1A","#E85D26","#F2D8C8"],"description":"暖纸与火橙"},
-        {"id":"government","name":"政企可信 · 深海蓝","colors":["#F3F1EA","#16355C","#7C91AA","#171B21"],"description":"单一深蓝色系"},
-        {"id":"women","name":"女性学习圈 · 暖珊瑚","colors":["#FFF5EF","#D95D62","#F3A5A8","#2F2830"],"description":"单一暖珊瑚色系"}
+        {"id":"terracotta","name":"墨绿烧赭（推荐）","colors":["#F4EFE6","#B64A32","#D8C8AE","#16231D"],"description":"经典编辑杂志"},
+        {"id":"emerald","name":"祖母绿纸刊","colors":["#F1F0E8","#376C57","#B9C8B1","#13241E"],"description":"自然人文出版"},
+        {"id":"burgundy","name":"勃艮第书刊","colors":["#F6F0EA","#7B2639","#D5B9AC","#241A1C"],"description":"成熟个人品牌"},
+        {"id":"marine","name":"深海蓝编辑","colors":["#F0EEE7","#1B4D6B","#AFC2CC","#16222B"],"description":"政企与专业内容"}
       ],
       "styles":[
-        {"id":"frontend-bold:soft-editorial","name":"Soft Editorial","zhName":"柔和编辑","layout":"四六分栏 · 纸刊正文","palette":["#F5F3EE","#1A1A1A","#E85D26","#F2D8C8"]},
-        {"id":"frontend-bold:emerald-editorial","name":"Emerald Editorial","zhName":"祖母绿杂志","layout":"反向三七分栏 · 双栏目录","palette":["#F1F0E8","#173B2C","#6D9A82","#15231D"]}
+        {"id":"beautiful-signature:editorial-issue","name":"Editorial Issue","zhName":"招牌编辑杂志","layout":"照片封面 · 文章双栏 · 目录与拉引语","palette":["#F4EFE6","#B64A32","#D8C8AE","#16231D"]}
       ]
     },
     {
       "id":"html-anything","name":"HTML Anything · Decks","zhName":"全场景幻灯片合集","author":"nexu-io","repo":"nexu-io/html-anything","primary":true,
-      "tagline":"暗色模块化产品界面，适合技术、产品和数据内容","recommendation":"模块清楚、界面感强，适合产品发布、技术分享和流程展示。","accent":"#00C8FF","previewImage":"/assets/previews/html-anything.png","count":2,
+      "tagline":"暗色模块化产品界面，适合技术、产品和数据内容","recommendation":"经典能力是操作台、终端窗口、指标卡片与模块化系统流程。","accent":"#00C8FF","previewImage":"/assets/previews/html-anything.png","count":1,
       "palettes":[
-        {"id":"theme","name":"深夜青蓝（推荐）","colors":["#0B0F18","#00C8FF","#7EE5FF","#F4F7FF"],"description":"单一青蓝色系"},
-        {"id":"mint","name":"终端薄荷","colors":["#0D1513","#4CC9A6","#9AE6D0","#F2FAF7"],"description":"单一薄荷色系"},
-        {"id":"mono","name":"黑白高对比","colors":["#111111","#777777","#D8D8D8","#FFFFFF"],"description":"单一灰阶"}
+        {"id":"cyber","name":"赛博青蓝（推荐）","colors":["#091018","#00D2FF","#103F50","#F2FBFF"],"description":"产品控制台招牌色"},
+        {"id":"terminal","name":"终端荧光绿","colors":["#07120E","#45E6A8","#143D31","#EFFFF8"],"description":"代码与 Agent 场景"},
+        {"id":"violet","name":"矩阵紫光","colors":["#0D0B18","#8B7CFF","#2B2352","#F5F2FF"],"description":"AI 产品发布"},
+        {"id":"mono","name":"黑白控制台","colors":["#090909","#FFFFFF","#303030","#EDEDED"],"description":"极简工程界面"}
       ],
       "styles":[
-        {"id":"skill:deck-blueprint","name":"Blueprint","zhName":"蓝图工程","layout":"上下模块封面 · 工程网格","palette":["#0B0F18","#00C8FF","#7EE5FF","#F4F7FF"]},
-        {"id":"skill:deck-graphify-dark","name":"Graphify Dark","zhName":"深色图表","layout":"反向四六合页 · 仪表盘网格","palette":["#0D1513","#4CC9A6","#9AE6D0","#F2FAF7"]}
+        {"id":"anything-signature:agent-dashboard","name":"Agent Dashboard","zhName":"招牌智能控制台","layout":"侧边导航 · 终端主屏 · 指标与系统模块","palette":["#091018","#00D2FF","#103F50","#F2FBFF"]}
       ]
     },
     {
       "id":"guizang","name":"归藏 PPT","zhName":"归藏电子杂志","author":"op7418","repo":"op7418/guizang-ppt-skill","primary":true,
-      "tagline":"中文电子杂志、书脊结构与电子墨水风格","recommendation":"适合观点型分享、行业演讲和高辨识度发布会。","accent":"#D3030F","previewImage":"/assets/previews/guizang-ppt.png","count":2,
+      "tagline":"中文电子杂志、书脊结构与电子墨水风格","recommendation":"经典能力是中文书脊、电子墨水纸张、朱红印章与大开本观点页。","accent":"#D3030F","previewImage":"/assets/previews/guizang-ppt.png","count":1,
       "palettes":[
-        {"id":"monocle","name":"墨水经典","colors":["#F2F2E9","#212836","#D3030F","#B7B7B1"],"description":"纸张、墨黑与朱红"},
-        {"id":"indigo","name":"靛蓝瓷","colors":["#F3EFE5","#1D315D","#7185AE","#171C29"],"description":"单一靛蓝色系"},
-        {"id":"forest","name":"森林墨","colors":["#EEEADF","#173B2C","#6E8D7C","#14211B"],"description":"单一森林绿色系"}
+        {"id":"red-ink","name":"朱红电子墨（推荐）","colors":["#F0EFE7","#D3030F","#B9B9B1","#202631"],"description":"归藏招牌书刊色"},
+        {"id":"indigo","name":"靛蓝瓷","colors":["#F1EFE8","#174CFF","#B6C3E2","#172033"],"description":"瑞士与东方融合"},
+        {"id":"forest","name":"森林墨","colors":["#EEEADF","#1F5B42","#AAB9A8","#14211B"],"description":"人文自然议题"},
+        {"id":"kraft","name":"牛皮纸红印","colors":["#D8BB83","#8F3429","#B99763","#2A241E"],"description":"复古档案刊物"}
       ],
       "styles":[
-        {"id":"guizang:editorial","name":"Editorial × E-Ink","zhName":"电子杂志 × 电子墨水","layout":"书脊大开本 · 电子墨水栏目","palette":["#F2F2E9","#212836","#D3030F","#B7B7B1"]},
-        {"id":"guizang:swiss","name":"Swiss International","zhName":"瑞士国际主义","layout":"反向二八封面 · 严格网格","palette":["#F5F3E9","#174CFF","#7F9BFF","#111318"]}
+        {"id":"guizang-signature:eink-magazine","name":"Editorial × E-Ink","zhName":"招牌电子墨水杂志","layout":"中文书脊 · 大开本观点 · 黑场章节页","palette":["#F0EFE7","#D3030F","#B9B9B1","#202631"]}
       ]
     },
     {
-      "id":"html-ppt","name":"HTML PPT Studio","zhName":"HTML 演示系统","author":"lewislulu","repo":"lewislulu/html-ppt-skill","primary":true,
+      "id":"html-ppt","name":"HTML PPT Studio","zhName":"HTML 演示系统","author":"lewislulu","repo":"lewislulu/html-ppt-skill","primary":false,
       "tagline":"瑞士网格、粗线条信息设计和演讲系统","recommendation":"适合正式汇报、图表、演讲者备注和持续迭代。","accent":"#165DFF","previewImage":"/assets/previews/html-ppt-studio.png","count":2,
       "palettes":[
         {"id":"theme","name":"瑞士钴蓝（推荐）","colors":["#F7F8FB","#165DFF","#8FAAFF","#161922"],"description":"单一钴蓝色系"},
