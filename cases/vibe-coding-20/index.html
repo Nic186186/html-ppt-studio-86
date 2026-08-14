@@ -126,6 +126,50 @@
     body[data-family="kami"] .card,body[data-family="kami"] .product-card,body[data-family="kami"] .mock-window{box-shadow:none;border-width:1px}
     body[data-family="beautiful-html-templates"] .slide.cover,body[data-family="html-anything"] .slide.cover,body[data-family="guizang"] .slide.cover,body[data-family="html-ppt"] .slide.cover,body[data-family="kami"] .slide.cover{padding:0}
 
+    /* === STYLE BLUEPRINTS：同一 Skill 内的主题也会改变结构，而非只换颜色 === */
+    body[data-style="frontend-preset:electric-studio"] .cover{grid-template-columns:1fr;grid-template-rows:72% 28%}
+    body[data-style="frontend-preset:electric-studio"] .cover-main{padding:62px 105px}
+    body[data-style="frontend-preset:electric-studio"] .cover h1{max-width:1500px}
+    body[data-style="frontend-preset:electric-studio"] .cover-side{border:0;border-top:4px solid currentColor;padding:30px 105px;flex-direction:row;align-items:center}
+    body[data-style="frontend-preset:electric-studio"] .cover-side .cover-quote{border:0;border-left:4px solid currentColor;padding:0 0 0 28px;font-size:38px}
+    body[data-style="frontend-preset:electric-studio"] .three{grid-template-columns:1.45fr .78fr .78fr}
+
+    body[data-style="frontend-bold:emerald-editorial"] .cover{grid-template-columns:34% 66%}
+    body[data-style="frontend-bold:emerald-editorial"] .cover-main{grid-column:2;grid-row:1;padding:105px 120px}
+    body[data-style="frontend-bold:emerald-editorial"] .cover-side{grid-column:1;grid-row:1;border:0;border-right:1px solid currentColor}
+    body[data-style="frontend-bold:emerald-editorial"] .cover h1{font-size:122px}
+    body[data-style="frontend-bold:emerald-editorial"] .split{grid-template-columns:38% 62%}
+    body[data-style="frontend-bold:emerald-editorial"] .cards{grid-template-columns:1fr 1fr}
+    body[data-style="frontend-bold:emerald-editorial"] .three{grid-template-columns:1fr 1.3fr .7fr}
+
+    body[data-style="skill:deck-graphify-dark"] .cover{grid-template-columns:40% 60%;grid-template-rows:1fr}
+    body[data-style="skill:deck-graphify-dark"] .cover-main{grid-column:2;grid-row:1;padding:72px 90px}
+    body[data-style="skill:deck-graphify-dark"] .cover-side{grid-column:1;grid-row:1;border:0;border-right:1px solid var(--blue);padding:72px 48px}
+    body[data-style="skill:deck-graphify-dark"] .cover-main h1{font-size:104px}
+    body[data-style="skill:deck-graphify-dark"] .three{grid-template-columns:1fr 1fr}
+    body[data-style="skill:deck-graphify-dark"] .three .card:first-child{grid-row:1/3}
+    body[data-style="skill:deck-graphify-dark"] .pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    body[data-style="skill:deck-graphify-dark"] .pipeline div{border:1px solid var(--blue);border-radius:18px}
+
+    body[data-style="guizang:swiss"] .slide{padding:76px 98px;background-image:linear-gradient(color-mix(in srgb,var(--ink) 8%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--ink) 8%,transparent) 1px,transparent 1px);background-size:96px 96px}
+    body[data-style="guizang:swiss"] .cover{grid-template-columns:28% 72%}
+    body[data-style="guizang:swiss"] .cover-main{grid-column:2;grid-row:1;padding:86px 100px;background-image:none}
+    body[data-style="guizang:swiss"] .cover-side{grid-column:1;grid-row:1;border:0}
+    body[data-style="guizang:swiss"] .topline{border-width:1px}
+    body[data-style="guizang:swiss"] .card,body[data-style="guizang:swiss"] .product-card{border:2px solid currentColor;border-top-width:2px}
+    body[data-style="guizang:swiss"] .three{grid-template-columns:2fr 1fr 1fr}
+
+    body[data-style="html-ppt-theme:academic-paper"]{--display:var(--serif)}
+    body[data-style="html-ppt-theme:academic-paper"] .slide{padding:105px 145px;background-image:none}
+    body[data-style="html-ppt-theme:academic-paper"] .cover{grid-template-columns:56% 44%}
+    body[data-style="html-ppt-theme:academic-paper"] .cover-main{padding:110px 130px}
+    body[data-style="html-ppt-theme:academic-paper"] .cover-side{border-left:1px solid currentColor}
+    body[data-style="html-ppt-theme:academic-paper"] .cover h1{font-family:var(--serif);font-size:118px}
+    body[data-style="html-ppt-theme:academic-paper"] .topline{border-bottom-width:1px;text-transform:none}
+    body[data-style="html-ppt-theme:academic-paper"] .page{background:transparent;color:currentColor;border-bottom:1px solid currentColor}
+    body[data-style="html-ppt-theme:academic-paper"] .card,body[data-style="html-ppt-theme:academic-paper"] .product-card,body[data-style="html-ppt-theme:academic-paper"] .mock-window{border-width:1px}
+    body[data-style="html-ppt-theme:academic-paper"] .split{grid-template-columns:.72fr 1.28fr}
+
     /* === CONTROLS & INLINE EDITING === */
     .controls{position:fixed;z-index:1000;left:50%;bottom:18px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;padding:8px;background:rgba(17,19,25,.9);border:1px solid rgba(255,255,255,.16);border-radius:99px}.controls button{width:40px;height:40px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:18px;cursor:pointer}.controls span{min-width:82px;text-align:center;color:#fff;font:700 12px var(--mono)}.progress{position:fixed;z-index:1001;left:0;bottom:0;height:4px;background:var(--coral);transition:width .35s var(--ease)}
     .edit-hotzone{position:fixed;top:0;left:0;width:80px;height:80px;z-index:10000;cursor:pointer}.edit-toggle{position:fixed;top:18px;left:18px;z-index:10001;width:44px;height:44px;border:2px solid #111319;background:var(--yellow);box-shadow:4px 4px 0 #111319;font-size:19px;opacity:0;pointer-events:none;transition:opacity .25s}.edit-toggle.show,.edit-toggle.active{opacity:1;pointer-events:auto}body.editing [data-edit]{outline:2px dashed var(--coral);outline-offset:4px;cursor:text}
@@ -178,7 +222,7 @@
   <nav class="controls" aria-label="幻灯片导航"><button id="prev" aria-label="上一页">←</button><span id="counter">01 / 20</span><button id="next" aria-label="下一页">→</button><button id="full" aria-label="全屏">⛶</button></nav><div class="progress" id="progress"></div>
   <script>
     /* === THEME ADAPTER：把工作台选择的色板映射到本案例 === */
-    const params=new URLSearchParams(location.search),family=params.get('family')||'frontend-slides',colors=(params.get('colors')||'').split(',').filter(c=>/^#[0-9a-f]{6}$/i.test(c));document.body.dataset.family=family;
+    const params=new URLSearchParams(location.search),family=params.get('family')||'frontend-slides',style=params.get('style')||'frontend-preset:bold-signal',colors=(params.get('colors')||'').split(',').filter(c=>/^#[0-9a-f]{6}$/i.test(c));document.body.dataset.family=family;document.body.dataset.style=style;
     const root=document.documentElement,rgb=h=>h.slice(1).match(/../g).map(x=>parseInt(x,16)/255),lum=h=>{const c=rgb(h).map(x=>x<=.03928?x/12.92:((x+.055)/1.055)**2.4);return .2126*c[0]+.7152*c[1]+.0722*c[2]},sat=h=>{const c=rgb(h),a=Math.max(...c),b=Math.min(...c);return a===b?0:(a-b)/(1-Math.abs(a+b-1))};
     if(colors.length>=2){const bg=colors[0],l=lum(bg),accent=colors.filter(c=>c!==bg&&Math.abs(lum(c)-l)>.16).sort((a,b)=>sat(b)-sat(a))[0]||colors[1],paper=l>.46?bg:'#f4f1eb',ink=l>.46?'#14161b':'#f6f2ea';root.style.setProperty('--bg',bg);root.style.setProperty('--stage-bg',l>.46?'#151515':bg);root.style.setProperty('--ink',ink);root.style.setProperty('--blue',accent);root.style.setProperty('--coral',`color-mix(in srgb,${accent} 68%,#ffffff)`);root.style.setProperty('--yellow',`color-mix(in srgb,${accent} 18%,${paper})`);root.style.setProperty('--surface',`color-mix(in srgb,${accent} 7%,${paper})`);root.style.setProperty('--muted',l>.46?'#62646a':'#b9b6b0')}
 

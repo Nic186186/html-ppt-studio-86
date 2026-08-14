@@ -11,8 +11,8 @@
         {"id":"mint","name":"薄荷清新","colors":["#F2FAF7","#2D7C70","#74E0BD","#14201D"],"description":"单一绿色系"}
       ],
       "styles":[
-        {"id":"frontend-preset:bold-signal","name":"Bold Signal","zhName":"强烈信号","palette":["#1A1A1A","#2D2D2D","#FF5722","#FFFFFF"]},
-        {"id":"frontend-preset:electric-studio","name":"Electric Studio","zhName":"电光工作室","palette":["#F5F3EA","#165DFF","#A8B9FF","#111318"]}
+        {"id":"frontend-preset:bold-signal","name":"Bold Signal","zhName":"强烈信号","layout":"左右发布会封面 · 粗线卡片","palette":["#1A1A1A","#2D2D2D","#FF5722","#FFFFFF"]},
+        {"id":"frontend-preset:electric-studio","name":"Electric Studio","zhName":"电光工作室","layout":"上下舞台封面 · 非对称三栏","palette":["#F5F3EA","#165DFF","#A8B9FF","#111318"]}
       ]
     },
     {
@@ -24,8 +24,8 @@
         {"id":"women","name":"女性学习圈 · 暖珊瑚","colors":["#FFF5EF","#D95D62","#F3A5A8","#2F2830"],"description":"单一暖珊瑚色系"}
       ],
       "styles":[
-        {"id":"frontend-bold:soft-editorial","name":"Soft Editorial","zhName":"柔和编辑","palette":["#F5F3EE","#1A1A1A","#E85D26","#F2D8C8"]},
-        {"id":"frontend-bold:emerald-editorial","name":"Emerald Editorial","zhName":"祖母绿杂志","palette":["#F1F0E8","#173B2C","#6D9A82","#15231D"]}
+        {"id":"frontend-bold:soft-editorial","name":"Soft Editorial","zhName":"柔和编辑","layout":"四六分栏 · 纸刊正文","palette":["#F5F3EE","#1A1A1A","#E85D26","#F2D8C8"]},
+        {"id":"frontend-bold:emerald-editorial","name":"Emerald Editorial","zhName":"祖母绿杂志","layout":"反向三七分栏 · 双栏目录","palette":["#F1F0E8","#173B2C","#6D9A82","#15231D"]}
       ]
     },
     {
@@ -37,8 +37,8 @@
         {"id":"mono","name":"黑白高对比","colors":["#111111","#777777","#D8D8D8","#FFFFFF"],"description":"单一灰阶"}
       ],
       "styles":[
-        {"id":"skill:deck-blueprint","name":"Blueprint","zhName":"蓝图工程","palette":["#0B0F18","#00C8FF","#7EE5FF","#F4F7FF"]},
-        {"id":"skill:deck-graphify-dark","name":"Graphify Dark","zhName":"深色图表","palette":["#0D1513","#4CC9A6","#9AE6D0","#F2FAF7"]}
+        {"id":"skill:deck-blueprint","name":"Blueprint","zhName":"蓝图工程","layout":"上下模块封面 · 工程网格","palette":["#0B0F18","#00C8FF","#7EE5FF","#F4F7FF"]},
+        {"id":"skill:deck-graphify-dark","name":"Graphify Dark","zhName":"深色图表","layout":"反向四六合页 · 仪表盘网格","palette":["#0D1513","#4CC9A6","#9AE6D0","#F2FAF7"]}
       ]
     },
     {
@@ -50,8 +50,8 @@
         {"id":"forest","name":"森林墨","colors":["#EEEADF","#173B2C","#6E8D7C","#14211B"],"description":"单一森林绿色系"}
       ],
       "styles":[
-        {"id":"guizang:editorial","name":"Editorial × E-Ink","zhName":"电子杂志 × 电子墨水","palette":["#F2F2E9","#212836","#D3030F","#B7B7B1"]},
-        {"id":"guizang:swiss","name":"Swiss International","zhName":"瑞士国际主义","palette":["#F5F3E9","#174CFF","#7F9BFF","#111318"]}
+        {"id":"guizang:editorial","name":"Editorial × E-Ink","zhName":"电子杂志 × 电子墨水","layout":"书脊大开本 · 电子墨水栏目","palette":["#F2F2E9","#212836","#D3030F","#B7B7B1"]},
+        {"id":"guizang:swiss","name":"Swiss International","zhName":"瑞士国际主义","layout":"反向二八封面 · 严格网格","palette":["#F5F3E9","#174CFF","#7F9BFF","#111318"]}
       ]
     },
     {
@@ -62,15 +62,15 @@
         {"id":"muted","name":"冷静灰蓝","colors":["#F1F0EC","#586174","#A7AFBF","#262833"],"description":"低饱和灰蓝"}
       ],
       "styles":[
-        {"id":"html-ppt-theme:swiss-grid","name":"Swiss Grid","zhName":"瑞士网格","palette":["#F7F8FB","#165DFF","#8FAAFF","#161922"]},
-        {"id":"html-ppt-theme:academic-paper","name":"Academic Paper","zhName":"学术论文","palette":["#FDFCF8","#586174","#A7AFBF","#17191F"]}
+        {"id":"html-ppt-theme:swiss-grid","name":"Swiss Grid","zhName":"瑞士网格","layout":"七三封面 · 粗线信息网格","palette":["#F7F8FB","#165DFF","#8FAAFF","#161922"]},
+        {"id":"html-ppt-theme:academic-paper","name":"Academic Paper","zhName":"学术论文","layout":"论文边距 · 细线双栏结构","palette":["#FDFCF8","#586174","#A7AFBF","#17191F"]}
       ]
     },
     {
       "id":"kami","name":"Kami","zhName":"安静阅读扩展","author":"tw93","repo":"tw93/Kami","primary":false,
       "tagline":"温暖羊皮纸与衬线层级的安静阅读风格","recommendation":"适合人文内容、白皮书和个人作品集。","accent":"#B88B57","previewImage":null,"count":1,
       "palettes":[{"id":"parchment","name":"羊皮纸 × 墨蓝","colors":["#F3ECDD","#17395C","#879CB4","#24211F"],"description":"温暖纸张色系"}],
-      "styles":[{"id":"kami:parchment","name":"Warm Parchment","zhName":"温暖羊皮纸","palette":["#F3ECDD","#17395C","#879CB4","#24211F"]}]
+      "styles":[{"id":"kami:parchment","name":"Warm Parchment","zhName":"温暖羊皮纸","layout":"大留白阅读 · 人文双栏","palette":["#F3ECDD","#17395C","#879CB4","#24211F"]}]
     }
   ],
   "referenceStyles":[

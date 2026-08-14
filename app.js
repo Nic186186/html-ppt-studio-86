@@ -46,6 +46,10 @@ const PROMPTS = [
 
 function escapeHtml(value) { return String(value || '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char])); }
 function readableText(hex) { const v=(hex||'#111111').replace('#',''); const rgb=v.length===3?v.split('').map(x=>parseInt(x+x,16)):[0,2,4].map(i=>parseInt(v.slice(i,i+2),16)); return rgb[0]*.299+rgb[1]*.587+rgb[2]*.114>150?'#12141b':'#fff'; }
+function publicAsset(path) {
+  if (!path || /^(data:|blob:|https?:)/i.test(path)) return path || '';
+  return new URL(String(path).replace(/^\/+/, ''), new URL('./', location.href)).href;
+}
 
 async function loadStudio() {
   $('#scan-status').textContent = '正在读取本地 Skill…';
@@ -62,8 +66,8 @@ async function loadStudio() {
 
 function renderFamilies() {
   const primary=state.studio.families.filter(f=>f.primary); const extensions=state.studio.families.filter(f=>!f.primary);
-  const card=(family,index)=>`<button class="family-card ${state.family?.id===family.id?'selected':''}" data-family="${family.id}" style="--family-accent:${family.accent}">
-    <span class="family-index">${String(index+1).padStart(2,'0')}</span><img src="${family.previewImage||''}" alt="" loading="lazy">
+  const card=(family,index)=>`<button class="family-card family-${family.id} ${state.family?.id===family.id?'selected':''}" data-family="${family.id}" style="--family-accent:${family.accent}">
+    <span class="family-index">${String(index+1).padStart(2,'0')}</span><img src="${escapeHtml(publicAsset(family.previewImage))}" alt="${escapeHtml(family.zhName)} 实际效果" loading="lazy">
     <div><small>${escapeHtml(family.author)} · ${family.count} 套</small><h3>${escapeHtml(family.zhName)}<em>${escapeHtml(family.name)}</em></h3><p>${escapeHtml(family.tagline)}</p></div><i>→</i>
   </button>`;
   $('#family-grid').innerHTML=primary.map(card).join('');
@@ -78,7 +82,7 @@ function selectFamily(id) {
   $('#detail-name').textContent = `${state.family.zhName} / ${state.family.name}`;
   $('#detail-reason').textContent = state.family.recommendation;
   $('#detail-repo').href = `https://github.com/${state.family.repo}`;
-  $('#detail-image').src=state.family.previewImage||''; $('#detail-image').alt=`${state.family.name} 实际效果截图`;
+  $('#detail-image').src=publicAsset(state.family.previewImage); $('#detail-image').alt=`${state.family.name} 实际效果截图`;
   $('#style-select').innerHTML = state.family.styles.map(style => `<option value="${escapeHtml(style.id)}">${escapeHtml(style.zhName||style.name)} / ${escapeHtml(style.name)}</option>`).join('');
   $('#color-select').innerHTML = state.family.palettes.map(palette => `<option value="${escapeHtml(palette.id)}">${escapeHtml(palette.name)}</option>`).join('');
   state.palette=state.family.palettes[0]; renderThemeGallery(); updatePaletteDisplay();
@@ -99,14 +103,14 @@ function casePreviewUrl(){
   const query=new URLSearchParams({family:state.family.id,style:state.style.id,colors:effectivePalette().join(',')});
   return `${casePath}?${query.toString()}`;
 }
-function updateCasePreview(){updateWorkbenchTheme();const frame=$('#instant-case-frame');if(!frame)return;const vibe=state.activeCase==='vibe';frame.src=casePreviewUrl();frame.title=vibe?'Vibe Coding 20页课程案例':'86老师个人介绍案例';$('#instant-case-title').textContent=vibe?`${state.family?.zhName||'Vibe Coding'} · 20 页专属版式案例`:'86 老师真实内容案例';$('#instant-case-copy').textContent=vibe?'主 Skill 决定版式语言，配色在同一色系内生成；切换后工作台环境也会同步变化。':'选择任一主题或配色，下面立即切换；生成前先看到真实内容效果。';$('#sample-btn').classList.toggle('featured',vibe);$('#profile-sample-btn').classList.toggle('featured',!vibe);}
+function updateCasePreview(){updateWorkbenchTheme();const frame=$('#instant-case-frame');if(!frame)return;const vibe=state.activeCase==='vibe';frame.classList.add('switching');frame.src=casePreviewUrl();frame.onload=()=>frame.classList.remove('switching');frame.title=vibe?'Vibe Coding 20页课程案例':'86老师个人介绍案例';$('#instant-case-title').textContent=vibe?`${state.family?.zhName||'Vibe Coding'} · ${state.style?.zhName||state.style?.name||''} · 20 页`:'86 老师真实内容案例';$('#instant-case-copy').textContent=vibe?'当前 Skill 与主题共同决定封面比例、栏目方向、卡片网格和正文节奏；配色只负责视觉气质。':'选择任一主题或配色，下面立即切换；生成前先看到真实内容效果。';$('#sample-btn').classList.toggle('featured',vibe);$('#profile-sample-btn').classList.toggle('featured',!vibe);}
 function renderThemeGallery(){
   $('#theme-count').textContent=`${state.family.styles.length} 套`;
-  $('#theme-gallery').innerHTML=state.family.styles.map(style=>`<button class="theme-chip ${state.style?.id===style.id?'selected':''}" data-style-id="${escapeHtml(style.id)}"><div>${(style.palette||[]).slice(0,5).map(color=>`<i style="--swatch:${color}"></i>`).join('')}</div><b>${escapeHtml(style.zhName||style.name)}</b><small>${escapeHtml(style.name)}</small></button>`).join('');
+  $('#theme-gallery').innerHTML=state.family.styles.map(style=>`<button class="theme-chip ${state.style?.id===style.id?'selected':''}" data-style-id="${escapeHtml(style.id)}"><div>${(style.palette||[]).slice(0,5).map(color=>`<i style="--swatch:${color}"></i>`).join('')}</div><b>${escapeHtml(style.zhName||style.name)}</b><small>${escapeHtml(style.name)}</small><em>${escapeHtml(style.layout||'专属版式结构')}</em></button>`).join('');
 }
 
 function renderReferenceStyles(){
-  $('#reference-style-list').innerHTML=`<button class="reference-style-card ${state.referenceStyle===null?'selected':''}" data-reference-style=""><span class="no-ref">NONE</span><div><b>不叠加参考风格</b><small>只使用所选 Skill 与主题</small></div></button>`+state.studio.referenceStyles.map(style=>`<button class="reference-style-card ${state.referenceStyle?.id===style.id?'selected':''}" data-reference-style="${style.id}"><img src="${style.previewImage}" alt=""><div><b>${escapeHtml(style.name)}</b><small>${escapeHtml(style.description)}</small><span class="ref-swatches">${style.palette.map(c=>`<i style="--swatch:${c}"></i>`).join('')}</span></div></button>`).join('');
+  $('#reference-style-list').innerHTML=`<button class="reference-style-card ${state.referenceStyle===null?'selected':''}" data-reference-style=""><span class="no-ref">NONE</span><div><b>不叠加参考风格</b><small>只使用所选 Skill 与主题</small></div></button>`+state.studio.referenceStyles.map(style=>`<button class="reference-style-card ${state.referenceStyle?.id===style.id?'selected':''}" data-reference-style="${style.id}"><img src="${escapeHtml(publicAsset(style.previewImage))}" alt="${escapeHtml(style.name)}"><div><b>${escapeHtml(style.name)}</b><small>${escapeHtml(style.description)}</small><span class="ref-swatches">${style.palette.map(c=>`<i style="--swatch:${c}"></i>`).join('')}</span></div></button>`).join('');
 }
 
 function renderCoverage(){
